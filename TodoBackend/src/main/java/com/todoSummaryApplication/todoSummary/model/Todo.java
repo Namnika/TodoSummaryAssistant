@@ -18,7 +18,4 @@ public class Todo {
 
     @Column(nullable = false)
     private String todoItem;
-
-    @Column(nullable = false)
-    private String todoSummary;
 }
