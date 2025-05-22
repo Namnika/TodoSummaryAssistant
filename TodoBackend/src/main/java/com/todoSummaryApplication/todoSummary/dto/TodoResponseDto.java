@@ -10,7 +10,4 @@ public class TodoResponseDto {
 
     @NotNull
     private String todoItem;
-
-    @NotNull
-    private String todoSummary;
 }
