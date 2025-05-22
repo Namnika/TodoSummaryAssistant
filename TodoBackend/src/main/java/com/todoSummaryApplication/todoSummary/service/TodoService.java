@@ -54,7 +54,6 @@ public class TodoService {
 		TodoResponseDto dto = new TodoResponseDto();
 		dto.setId(todo.getId());
 		dto.setTodoItem(todo.getTodoItem());
-		dto.setTodoSummary(todo.getTodoSummary());
 
 		return dto;
 
