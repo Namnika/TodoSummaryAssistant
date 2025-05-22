@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Todo Summary Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I developed a full-stack application built with React (for the frontend) and Java with Spring Boot framework (for the backend) manages users tasks and generate summaries using Cohere LLM (large language model) API which sent the summaries to slack channel.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- **Frontend:** React.js
+- **Backend:** Java (Spring Boot)
+- **Database:** PostgreSQL (Supabase)
+- **LLM Integration:** Cohere API
+- **Slack Integration:** Incoming Webhooks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup Instructions
 
-### `npm test`
+1. Clone the repository: git clone https://github.com/your-username/your-repo-name.git
+2. Install dependencies: npm install
+3. Start the server: npm start
+4. Open the application in your browser: http://localhost:3000 this will run your frontend React app
+   - Make sure to run the backend server, run this command: `./mvnw spring-boot:run`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Slack Setup Guidance
 
-### `npm run build`
+To integrate slack into this application, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Go to [Slack API: Incoming Webhooks](<https://api.slack.com/apps(https://api.slack.com/messaging/webhooks)>)
+2. Create a new slack app from scratch
+3. Enable incoming webhook and generate incoming webhook url.
+   (dashboard page-> sidebar -> Incoming Webhooks -> turn it on -> generate url)
+4. Copy that url and paste it to your `.env` file
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Cohere LLM API Setup Guidance
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To integrate cohere api, follow below steps:
 
-### `npm run eject`
+1. Sign up at [Cohere](https://cohere.com/).
+2. Go to your dashboard and generate an API key.
+3. Add this API key to your .env.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### API Endpoints
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<table>
+<thead>
+  <tr>
+	 <th>Method</th>
+	 <th>Endpoint</th>
+	 <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+	 <td>GET</td>
+	 <td>/todos</td>
+	 <td>Fetch all todos</td>
+  </tr>
+  <tr>
+	 <td>POST</td>
+	 <td>/todos</td>
+	 <td>Fetch all todos</td>
+  </tr>
+  <tr>
+	 <td>DELETE</td>
+	 <td>/todos/:id </td>
+	 <td>Delete todo by ID </td>
+  </tr>
+  <tr>
+	 <td>POST</td>
+	 <td>/summarize</td>
+	 <td>Generate summary and send to Slack</td>
+  </tr>
+  </tbody>
+</table>
