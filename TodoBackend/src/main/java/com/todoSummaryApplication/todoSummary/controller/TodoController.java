@@ -102,12 +102,12 @@ public class TodoController {
             throw new RuntimeException("No Todo Items to Summarize!");
         }
 
-        // Combine all todo items into a single string
+        // Combining all todo items into a single string
         String combinedText = todos.stream()
                 .map(Todo::getTodoItem)
                 .collect(Collectors.joining("\n"));
 
-        // Call Cohere API to generate summary
+        // Calling Cohere API to generate summary
         String summary = cohereService.generateSummary(combinedText);
 
         // send to slack
