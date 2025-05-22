@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li{
+  list-style: none;
+}
+
+/* TodoApp Styles */
+
+.TodoApp {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.TodoApp-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.TodoApp-header h2 {
+  margin-top: 0;
+}
+
+.TodoApp-header p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Todo List Styles */
+
+.todo-container {
+  margin-top: 20px;
+}
+
+.todo-addtask {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-addtask input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-addtask input[type="text"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-addtask button {
+  width: 20%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-addtask button:hover {
+  background-color: #3e8e41;
+}
+
+.todo-lists {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-lists li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-lists li:last-child {
+  border-bottom: none;
+}
+
+.todo-lists li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Todo Item Styles */
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.list button {
+  width: 20%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.list button:hover {
+  background-color: #3e8e41;
+}
+
+/* Summary Styles */
+
+.summary-container {
+  margin-top: 20px;
+}
+
+.summary-button button{
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.summary-button button:hover {
+  background-color: #3e8e41;
+}
+
+.summary-inner {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.summary-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.summary-text {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Error Message Styles */
+
+.error-mesaage {
+  color: #f00;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
