@@ -52,6 +52,7 @@ const TodoPage = () => {
             console.log(response.data);
 
             setTasks([...tasks, response.data]);
+            setInput('')
         } catch (error) {
             setError("Failed to Add Tasks !" + error.message);
         }
