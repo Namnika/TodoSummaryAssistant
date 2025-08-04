@@ -10,7 +10,7 @@ const TodoPage = () => {
     const [updateInput, setUpdateInput] = useState("");
 
 
-    const apiBaseUrl = "http://localhost:8080/todos";
+    const apiBaseUrl = `${process.env.REACT_APP_API_URL}/todos`;
 
 
     // Getting todos
@@ -32,7 +32,7 @@ const TodoPage = () => {
     };
 
     useEffect(() => {
-        getTodo().catch(console.error);
+        getTodo();
     }, []);
 
 
