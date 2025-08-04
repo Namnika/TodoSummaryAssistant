@@ -49,7 +49,7 @@ const TodoPage = () => {
                     "Content-Type": "application/json",
                 }
             });
-            console.log(response.data);
+            // console.log(response.data);
 
             setTasks([...tasks, response.data]);
             setInput('')
@@ -145,7 +145,7 @@ const TodoPage = () => {
                                 ) : (
                                     tasks.map((task, index) => {
                                         return (
-                                            <div className="list">
+                                            <div className="list" key={task.id}>
                                                 {editingId === task.id ? (
                                                     <input type="text" name="todoupdateinput" value={updateInput} onChange={(e) => setUpdateInput(e.target.value)} />
 
