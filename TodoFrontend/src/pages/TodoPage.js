@@ -153,15 +153,16 @@ const TodoPage = () => {
                                                     <li key={index}>{task.todoItem}</li>
 
                                                 }
-
-                                                {editingId === task.id ? (
-                                                    <button onClick={handleUpdate}>Update</button>
-                                                ) : (
-                                                    <button onClick={() => {
-                                                        handleEdit(task)
-                                                    }}>Edit</button>
-                                                )}
-                                                <button onClick={() => handleDelete(task.id)}>Delete</button>
+                                                <div style={{ display: 'inline-flex' }}>
+                                                    {editingId === task.id ? (
+                                                        <button onClick={handleUpdate}>Update</button>
+                                                    ) : (
+                                                        <button onClick={() => {
+                                                            handleEdit(task)
+                                                        }}>Edit</button>
+                                                    )}
+                                                    <button onClick={() => handleDelete(task.id)}>Delete</button>
+                                                </div>
                                             </div>
                                         );
                                     })
