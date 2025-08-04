@@ -2,6 +2,9 @@
 
 I developed a full-stack application built with React (for the frontend) and Java with Spring Boot framework (for the backend) manages users tasks and generate summaries using Cohere LLM (large language model) API which sent the summaries to slack channel.
 
+> #### _Install the app in one click and get your task summaries delivered straight to your Slack channel!_
+<a href="https://slack.com/oauth/v2/authorize?client_id=8947962800497.8937211544354&scope=incoming-webhook,chat:write,commands&user_scope="><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
+
 ---
 
 ## Tech Stack
