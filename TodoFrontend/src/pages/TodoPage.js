@@ -153,7 +153,7 @@ const TodoPage = () => {
                                                     <li key={index}>{task.todoItem}</li>
 
                                                 }
-                                                <div style={{ display: 'inline-flex' }}>
+                                                <div style={{ display: 'inline-flex', gap: '10px' }}>
                                                     {editingId === task.id ? (
                                                         <button onClick={handleUpdate}>Update</button>
                                                     ) : (
