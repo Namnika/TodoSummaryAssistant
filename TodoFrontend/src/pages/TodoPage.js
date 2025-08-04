@@ -23,7 +23,7 @@ const TodoPage = () => {
                 setError("No Tasks Added.");
                 return;
             }
-            console.log(response.data);
+            // console.log(response.data);
 
             setTasks(response.data);
         } catch (error) {
@@ -76,7 +76,7 @@ const TodoPage = () => {
                 }
             });
 
-            console.log(response.data);
+            // console.log(response.data);
             setTasks(
                 tasks.map((t) =>
                     t.id === editingId ? { ...t, todoItem: response.data.todoItem } : t
