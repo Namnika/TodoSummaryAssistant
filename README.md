@@ -3,6 +3,11 @@
 I developed a full-stack application built with React (for the frontend) and Java with Spring Boot framework (for the backend) manages users tasks and generate summaries using Cohere LLM (large language model) API which sent the summaries to slack channel.
 
 ---
+> _Meanwhile, install the app with a single click and receive summaries directly in your Slack channel!_
+>
+> <a href="https://slack.com/oauth/v2/authorize?client_id=8947962800497.8937211544354&scope=incoming-webhook,chat:write,commands&user_scope="><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
+
+---
 
 ## Tech Stack
 
@@ -17,8 +22,8 @@ I developed a full-stack application built with React (for the frontend) and Jav
 ## Setup Instructions
 
 1. Clone the repository: git clone https://github.com/Namnika/TodoSummaryAssistant.git
-2. Install dependencies: npm install
-3. Start the server: npm start
+2. Install dependencies: `npm install`
+3. Start the server: `npm start`
 4. Open the application in your browser: http://localhost:3000 this will run your frontend React app
    - Make sure to run the backend server, run this command: `./mvnw spring-boot:run`
 
