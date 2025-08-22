@@ -2,30 +2,30 @@ name: Supabase Ping
 
 on:
   schedule:
-    # Runs every day at 9:00 AM UTC
+    # Runs every 30 minutes
     - cron: "*/30 * * * *"
-  workflow_dispatch: # allows you to run manually from GitHub
+  workflow_dispatch: # allows manual trigger
 
 jobs:
   ping:
     runs-on: ubuntu-latest
-    
-    # Checkout the repository
+
     steps:
+      # Checkout the repository
       - name: Checkout Repo
         uses: actions/checkout@v3
-        
-    # Set up Node.js
+
+      # Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-    
-    # Install Supabase Client
+
+      # Install Supabase Client
       - name: Install Dependencies
         run: npm install @supabase/supabase-js
-    
-	  # Ping Supabase
+
+      # Ping Supabase
       - name: Ping Supabase
         run: |
           node -e "
@@ -38,7 +38,7 @@ jobs:
           (async () => {
             try {
               const { data, error } = await supabase
-                .from('todos')   // change to your actual table
+                .from('todos')   // replace with your actual table
                 .select('*')
                 .limit(10);
 
