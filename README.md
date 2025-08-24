@@ -1,6 +1,6 @@
 # Todo Summary Assistant
 
-I developed a full-stack application built with React (for the frontend) and Java with Spring Boot framework (for the backend) manages users tasks and generate summaries using Cohere LLM (large language model) API which sent the summaries to slack channel.
+I developed a full-stack application built with React (for the frontend) and Java, utilising the Spring Boot framework (for the backend), that manages users' tasks and generates summaries using the Cohere LLM (large language model) API. This API sends the summaries to a  Slack channel.
 
 ---
 > _Meanwhile, install the app with a single click and receive summaries directly in your Slack channel!_
